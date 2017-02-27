@@ -101,6 +101,7 @@ Plug 'kana/vim-submode'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
+Plug 'Shougo/unite.vim'
 call plug#end()
   "ウィンドウサイズ変更
 call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
