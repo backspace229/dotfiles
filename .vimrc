@@ -99,6 +99,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go'
 Plug 'kana/vim-submode'
 Plug 'Townk/vim-autoclose'
+Plug 'tpope/vim-fugitive'
+Plug 'itchyny/lightline.vim'
 call plug#end()
   "ウィンドウサイズ変更
 call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
@@ -117,3 +119,8 @@ let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+"lightline設定
+let g:lightline = {
+      \ 'colorscheme': 'wombat'
+      \ }
