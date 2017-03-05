@@ -102,8 +102,9 @@ Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'Shougo/unite.vim'
+Plug 'thinca/vim-quickrun'
 call plug#end()
-" ウィンドウサイズ変更
+" ウィンドウサイズ変更(vim-submode必須)
 call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
 call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
 call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
@@ -113,6 +114,7 @@ call submode#map('bufmove', 'n', '', '<', '<C-w><')
 call submode#map('bufmove', 'n', '', '+', '<C-w>+')
 call submode#map('bufmove', 'n', '', '-', '<C-w>-')
 
+" golang
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -121,6 +123,9 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
-" lightline設定
+" lightline設定(lightline.vim必須)
 let g:lightline = { 'colorscheme': 'wombat' }
 
+" vim-quickrun用
+let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
+set splitright
